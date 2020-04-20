@@ -1,4 +1,6 @@
 let allData = [];
+const userInput = document.getElementById("user-input");
+const listContainer = document.querySelector(".list-container");
 
 const url =
     "https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json";
@@ -12,14 +14,6 @@ fetch(url)
     .then((data) => {
         allData.push(...data);
     });
-
-// take the user input value
-// loop through the data
-// match the input value to datas city OR state
-// create an li element to display that data and append it to the ul element
-
-const userInput = document.getElementById("user-input");
-const listContainer = document.querySelector(".list-container");
 
 function findMatches(userInput, allData) {
     return allData.filter((item) => {
@@ -45,8 +39,8 @@ function displayMatches() {
                 `<mark>${userInput.value}</mark>`
             );
 
-            return `<li><span class="" > ${city}, ${state}</span>
-            <span class="population" >${match.population}</span></li>`;
+            return `<li class="list-item" ><span class="city" > ${city}, ${state}</span>
+            <span class="population" >Population: ${match.population}</span></li>`;
         })
         //join to turn array into string
         .join("");
