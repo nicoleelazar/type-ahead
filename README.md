@@ -1,3 +1,3 @@
 # type-ahead
 
-Practice project 
+Practice project from Wes Bos challenges
