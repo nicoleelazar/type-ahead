@@ -1,9 +1,16 @@
 body {
   background-color: #fdb836;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heading {
+  color: #faebce;
+  text-align: center;
+  margin-top: 25px;
 }
 
 form {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   font-size: 18px;
 }
@@ -25,12 +32,20 @@ form .list-container {
 }
 
 form .list-container .list-item {
-  border: 1px solid #b1b1b1;
+  border: 0.5px solid #b1b1b1;
   color: grey;
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-form .list-container .population {
-  float: right;
+form .list-container .population, form .list-container .city {
+  margin: 5px 15px;
 }
 /*# sourceMappingURL=style.css.map */

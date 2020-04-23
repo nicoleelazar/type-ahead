@@ -1,9 +1,17 @@
 body {
     background-color: rgb(253, 184, 54);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+.heading {
+    color: rgb(250, 235, 206);
+    text-align: center;
+    margin-top: 25px;
+}
+
+
 form {
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     font-size: 18px;
 
@@ -23,13 +31,17 @@ form {
         background-color: white;
 
         .list-item {
-            border: 1px solid rgb(177, 177, 177);
+            border: 0.5px solid rgb(177, 177, 177);
             color: grey;
             padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
         }
 
-        .population {
-            float: right;
+        .population, .city {
+            margin: 5px 15px;
         }
     }
 }
